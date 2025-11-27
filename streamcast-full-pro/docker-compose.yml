@@ -1,0 +1,45 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:15
+    container_name: streamcast-db
+    environment:
+      POSTGRES_USER: streamcast
+      POSTGRES_PASSWORD: streamcast
+      POSTGRES_DB: streamcastdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: streamcast-backend
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/streamcastdb
+      SPRING_DATASOURCE_USERNAME: streamcast
+      SPRING_DATASOURCE_PASSWORD: streamcast
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./frontend
+    container_name: streamcast-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+
+  discord-bot:
+    build: ./discord-bot
+    container_name: streamcast-discord-bot
+    depends_on:
+      - backend
+    environment:
+      DISCORD_BOT_TOKEN: "COLOQUE_SEU_TOKEN_AQUI"
+      API_BASE_URL: "http://backend:8080"
+
+volumes:
+  db_data:
