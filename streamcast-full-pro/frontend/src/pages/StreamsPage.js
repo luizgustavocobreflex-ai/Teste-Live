@@ -1,19 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import api from '../services/api';
-import { StreamCard } from '../components/StreamCard';
+import React from "react";
+import Layout from "../components/Layout";
 
-export function StreamsPage(){
-  const [streams, setStreams] = useState([]);
-
-  useEffect(() => {
-    api.get('/api/streams').then(r => setStreams(r.data)).catch(() => setStreams([]));
-  }, []);
-
+export default function StreamsPage() {
   return (
-    <div style={{padding:24, color:'#e5e7eb'}}>
-      <h2 style={{marginTop:0}}>Streams cadastradas (exemplo)</h2>
-      {streams.map(s => <StreamCard key={s.id} stream={s} />)}
-      {streams.length === 0 && <p style={{opacity:0.7}}>Nenhuma stream cadastrada ainda.</p>}
-    </div>
+    <Layout title="Streams">
+      <h2>Página de Streams</h2>
+      <p>Gestão de transmissões.</p>
+    </Layout>
   );
 }

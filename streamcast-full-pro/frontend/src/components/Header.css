@@ -1,0 +1,24 @@
+.header {
+  height: 85px;
+  background: #0d1b33; /* azul escuro do layout original */
+  color: #ffffff;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 35px;
+  border-bottom: 2px solid #0a1224;
+}
+
+/* Título grande */
+.header-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Texto do usuário */
+.header-user {
+  font-size: 15px;
+  opacity: 0.9;
+}

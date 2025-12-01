@@ -1,0 +1,114 @@
+.sidebar {
+  width: 310px;
+  background: #0d0d0d;
+  padding: 20px;
+  border-right: 3px solid #3c3c3c;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+/* LOGO */
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.sidebar-logo img {
+  width: 65px;
+  margin-bottom: 10px;
+}
+
+.sidebar-logo h2 {
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* SECTIONS */
+.sidebar-section {
+  margin-bottom: 25px;
+}
+
+.sidebar-section h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #d6d6d6;
+}
+
+/* LIVE STATUS */
+.live h3 {
+  color: #ff4b4b;
+}
+
+.live-indicator {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.live-indicator .dot {
+  width: 10px;
+  height: 10px;
+  background: #31ff31;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.username {
+  font-size: 14px;
+  margin-top: 3px;
+  margin-bottom: 15px;
+}
+
+/* INFO BLOCKS */
+.info-block {
+  background: #181818;
+  border: 1px solid #443;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-block .label {
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.info-block .value {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.value.green {
+  color: #31ff50;
+}
+
+.value.gold {
+  color: #ffd86b;
+}
+
+/* TOP 7 */
+.lurkers-list {
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ACTIVE LURKERS */
+.active-list {
+  padding-left: 15px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.active-list li {
+  font-size: 13px;
+  line-height: 1.4;
+}

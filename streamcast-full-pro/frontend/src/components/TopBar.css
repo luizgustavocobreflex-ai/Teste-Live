@@ -1,0 +1,54 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.topbar-box {
+  background: #262626;
+  border: 1px solid #3b3b3b;
+  padding: 10px 14px;
+  width: 220px;
+  border-radius: 6px;
+  color: #f1f1f1;
+}
+
+.topbar-box h3 {
+  margin: 0;
+  font-size: 13px;
+}
+
+.topbar-box .sub {
+  margin-top: 3px;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.topbar-btn {
+  padding: 10px 18px;
+  font-size: 13px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.tutorial {
+  background: #ffd949;
+  color: #000;
+}
+
+.help {
+  background: #ff4c4c;
+  color: #fff;
+}
+
+.icons {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.icon {
+  font-size: 16px;
+}

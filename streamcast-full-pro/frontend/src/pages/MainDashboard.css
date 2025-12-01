@@ -1,0 +1,289 @@
+/* ========================================= */
+/*  PAINEL STREAMCAST — ESTILO FIDELÍSSIMO   */
+/* ========================================= */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 25px;
+  background: #0d0d0d;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ========================================= */
+/* SUPERIOR — STATUS + BOTÕES                */
+/* ========================================= */
+
+.top-status-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.status-left {
+  width: 320px;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #2a2a2a;
+}
+
+.username {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.status-box {
+  background: #181818;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  border: 1px solid #333;
+}
+
+.status-box .label {
+  opacity: 0.8;
+}
+
+.status-box .value {
+  font-weight: bold;
+}
+
+.status-box .green {
+  color: #31ff50;
+}
+
+.status-box .gold {
+  color: #ffd86b;
+}
+
+/* Botões superiores */
+.top-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #242424;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.gray {
+  color: #ddd;
+}
+
+.btn.yellow {
+  background: #ffda47;
+  color: #000;
+}
+
+.btn.red {
+  background: #ff4b4b;
+  color: #fff;
+}
+
+/* ========================================= */
+/* DESTAQUES                                 */
+/* ========================================= */
+
+.top-row {
+  display: flex;
+  gap: 25px;
+}
+
+.highlight-box {
+  flex: 1;
+  background: #1a1a1a;
+  border: 3px solid #7d2cff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(110, 0, 255, 0.35);
+}
+
+.highlight-box.vip {
+  border-color: #ffdf70;
+  box-shadow: 0 0 12px rgba(255, 215, 80, 0.45);
+}
+
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.box-header h3 {
+  margin: 0;
+  color: #fff;
+}
+
+.timer {
+  font-weight: bold;
+  color: #ddd;
+}
+
+.highlight-content {
+  display: flex;
+  gap: 12px;
+}
+
+.fake-video {
+  background: #000;
+  height: 240px;
+  flex: 2;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-box {
+  background: #0f0f0f;
+  height: 240px;
+  flex: 1;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-info {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ========================================= */
+/* QUEUE / FILAS                              */
+/* ========================================= */
+
+.queue-section {
+  display: flex;
+  gap: 30px;
+}
+
+.queue-container {
+  flex: 1;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #3b115a;
+}
+
+.queue-users {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.queue-avatar {
+  width: 50px;
+  height: 50px;
+  background: #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========================================= */
+/* RANKING & VANTAGENS                       */
+/* ========================================= */
+
+.ranking-container {
+  background: #1a1a1a;
+  padding: 22px;
+  border-radius: 12px;
+  border: 2px solid #3b115a;
+}
+
+.ranking-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.rank-card {
+  background: #292929;
+  padding: 14px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 13px;
+  border: 2px solid #444;
+}
+
+/* ========================================= */
+/* NOTIFICAÇÕES                              */
+/* ========================================= */
+
+.notifications-container {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid #3b115a;
+}
+
+.discord-btn {
+  margin-top: 12px;
+  background: #5865f2;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ========================================= */
+/* STORE                                     */
+/* ========================================= */
+
+.store-container {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid #3b115a;
+}
+
+.store-btn {
+  margin-top: 12px;
+  background: #b061ff;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ========================================= */
+/* CONFIGS DO SISTEMA                        */
+/* ========================================= */
+
+.system-config {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid #3b115a;
+}
+
+.system-config ul {
+  padding-left: 20px;
+  margin-top: 12px;
+}
+
+.system-config li {
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
