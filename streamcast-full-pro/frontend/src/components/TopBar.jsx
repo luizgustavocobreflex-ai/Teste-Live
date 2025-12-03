@@ -1,38 +1,67 @@
 import React from "react";
 import "./TopBar.css";
-import { FaTwitch, FaYoutube, FaKickstarterK } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
 
 export default function TopBar() {
   return (
     <div className="topbar">
 
-      {/* BOTÃO 1 */}
-      <div className="topbar-box">
-        <h3>SIGA & SEJA SEGUIDO</h3>
-        <span className="sub">SEM NOVOS CANAIS</span>
-      </div>
-
-      {/* BOTÃO 2 */}
-      <div className="topbar-box">
-        <h3>CONECTAR CANAIS</h3>
-        <div className="icons">
-          <FaTwitch className="icon twitch" />
-          <FaKickstarterK className="icon kick" />
-          <FaYoutube className="icon yt" />
+      {/* SIGA E SEJA SEGUIDO */}
+      <div className="tb-box">
+        <img
+          src="/assets/icons/painel-status/topbar/Sigaesejaseguido.png"
+          alt="Siga e Seja Seguido"
+          className="tb-title-img"
+        />
+        <div className="tb-row">
+          <img src="/assets/icons/painel-status/topbar/SemNovosCanais.png" alt="" className="tb-small-btn"/>
+          <img src="/assets/icons/painel-status/topbar/AguardarButton.png" alt="" className="tb-small-btn"/>
         </div>
       </div>
 
-      {/* BOTÃO 3 */}
-      <div className="topbar-box">
-        <h3>VERIFICAR ATUALIZAÇÕES</h3>
-        <span className="sub update">ATUALIZAÇÃO VERSÃO 2.0</span>
+      <img src="/assets/icons/painel-status/topbar/DiamanteDourado.png" className="tb-sep" alt="sep" />
+
+      {/* CONECTAR CANAIS */}
+      <div className="tb-box">
+        <span className="tb-label">CONECTAR CANAIS</span>
+        <div className="tb-row">
+          <img src="/assets/icons/painel-status/topbar/TwitchNeonLogo.png" className="tb-mini" alt="Twitch" />
+          <img src="/assets/icons/painel-status/topbar/KickMiniLogo.png" className="tb-mini" alt="Kick" />
+          <img src="/assets/icons/painel-status/topbar/YouTubeMiniLogo.png" className="tb-mini" alt="YouTube" />
+        </div>
       </div>
 
+      <img src="/assets/icons/painel-status/topbar/DiamanteDourado.png" className="tb-sep" alt="sep" />
+
+      {/* ATUALIZAÇÕES */}
+      <div className="tb-box">
+        <span className="tb-label">VERIFICAR ATUALIZAÇÕES</span>
+        <div className="tb-row">
+          <img src="/assets/icons/painel-status/topbar/AtualizacaoVersao.png" className="tb-small-btn" alt="Atualização" />
+          <img src="/assets/icons/painel-status/topbar/Download.png" className="tb-mini" alt="Download" />
+        </div>
+      </div>
+
+      <img src="/assets/icons/painel-status/topbar/DiamanteDourado.png" className="tb-sep" alt="sep" />
+
       {/* TUTORIAL */}
-      <button className="topbar-btn tutorial">TUTORIAL</button>
+      <div className="tb-box">
+        <img src="/assets/icons/painel-status/topbar/TutorialVermelho.png" className="tb-big-btn" alt="Tutorial" />
+      </div>
+
+      <img src="/assets/icons/painel-status/topbar/DiamanteDourado.png" className="tb-sep" alt="sep" />
 
       {/* AJUDA */}
-      <button className="topbar-btn help">AJUDA</button>
+      <div className="tb-box">
+        <img src="/assets/icons/painel-status/topbar/AjudaAmarelo.png" className="tb-big-btn" alt="Ajuda" />
+      </div>
+
+      <img src="/assets/icons/painel-status/topbar/DiamanteDourado.png" className="tb-sep" alt="sep" />
+
+      {/* USUÁRIO */}
+      <div className="tb-user-area">
+        <FaUserCircle className="tb-user" />
+      </div>
 
     </div>
   );

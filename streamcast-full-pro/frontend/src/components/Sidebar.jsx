@@ -2,95 +2,81 @@ import React from "react";
 import "./Sidebar.css";
 
 export default function Sidebar() {
-  const topLurkers = [
-    "dosnove",
-    "AdnMemory",
-    "yamato_vitoriano",
-    "playerferraz",
-    "roningamingbr",
-    "thelorldheg",
-    "rosaninha_fenix",
-  ];
-
-  const activeLurkers = [
-    "Ronin_ghost07",
-    "ocegovelho",
-    "jogandocerto",
-    "CafofoGameplay",
-    "mbo71",
-    "near_nee",
-    "rodrigo_garou",
-    "mundodemilu",
-    "dosnove",
-    "AdnMemory",
-    "yamato_vitoriano",
-    "playerferraz",
-    "roningamingbr",
-    "thelorldheg",
-    "rosaninha_fenix",
-  ];
-
   return (
     <div className="sidebar">
-      {/* LOGO */}
+
+      {/* LOGO DO SISTEMA */}
       <div className="sidebar-logo">
-        <img src="/logo192.png" alt="Logo" />
-        <h2>StreamCast<br/>Network</h2>
+        <img
+          src="/assets/icons/painel-status/StreamcastLogo.png"
+          alt="Logo StreamCast"
+          className="logo-img"
+        />
       </div>
 
       {/* LIVE STATUS */}
-      <div className="sidebar-section live">
-        <h3>LIVE STATUS</h3>
-        <div className="live-indicator">
-          <span className="dot"></span> ON
-        </div>
-        <p className="username">RoninGamingBR</p>
+<div className="status-header">
+
+  <div className="live-row">
+    <img
+      src="/assets/icons/painel-status/Live Status.png"
+      alt="Live Status"
+      className="status-icon-text"
+    />
+
+    <img
+      src="/assets/icons/painel-status/Button On02black.png"
+      alt="ON"
+      className="status-toggle"
+    />
+  </div>
+
+  <div className="status-user">RoninGamingBR</div>
+
+</div>
+
+      {/* PONTOS DE LURK */}
+      <div className="status-row">
+        <img src="/assets/icons/painel-status/Estrela.png" className="status-ico" />
+        <div className="row-title">PONTOS DE LURK</div>
+        <div className="row-value">8000</div>
+        <img src="/assets/icons/painel-status/Check.png" className="status-check" />
       </div>
 
-      {/* INFO BLOCKS */}
-      <div className="info-block">
-        <span className="label">PONTOS DE LURK</span>
-        <span className="value">8000</span>
+      {/* PASSE VIP */}
+      <div className="status-row">
+        <img src="/assets/icons/painel-status/VIP.png" className="status-ico vip-icon" />
+        <div className="row-title">PASSE VIP</div>
+        <div className="row-value">20</div>
+        <img src="/assets/icons/painel-status/Check.png" className="status-check" />
       </div>
 
-      <div className="info-block">
-        <span className="label">PASSE VIP</span>
-        <span className="value green">20 ✓</span>
+      {/* TICKETS/FOLLOWS */}
+      <div className="status-row">
+        <img src="/assets/icons/painel-status/Follow Heart.png" className="status-ico" />
+        <div className="row-title">TICKETS/FOLLOWS</div>
+        <div className="row-value">10</div>
+        <img src="/assets/icons/painel-status/Check.png" className="status-check" />
       </div>
 
-      <div className="info-block">
-        <span className="label">TICKETS/FOLLOWS</span>
-        <span className="value green">10 ✓</span>
+      {/* RANKING */}
+      <div className="status-row">
+        <img src="/assets/icons/painel-status/Ranking.png" className="status-ico" />
+        <div className="row-title">RANKING</div>
+        <div className="row-value gold">OURO</div>
+        <img
+          src="/assets/icons/painel-status/3- Gold Badges.png"
+          className="rank-badge"
+        />
       </div>
 
-      <div className="info-block">
-        <span className="label">RANKING</span>
-        <span className="value gold">OURO ★</span>
-      </div>
-
-      <div className="info-block">
-        <span className="label">META DE LURK</span>
-        <span className="value">8000</span>
-      </div>
-
-      {/* TOP 7 */}
-      <div className="sidebar-section">
-        <h3>TOP 7 LURKERS DO MÊS</h3>
-        <ol className="lurkers-list">
-          {topLurkers.map((name, i) => (
-            <li key={i}>{name}</li>
-          ))}
-        </ol>
-      </div>
-
-      {/* LURKERS ATIVOS */}
-      <div className="sidebar-section">
-        <h3>LURKERS ATIVOS: {activeLurkers.length}</h3>
-        <ul className="active-list">
-          {activeLurkers.map((name, i) => (
-            <li key={i}>{name}</li>
-          ))}
-        </ul>
+      {/* META DE LURK */}
+      <div className="status-row">
+        <img src="/assets/icons/painel-status/Metal Verificado.png" className="status-ico" />
+        <div className="row-title">META DE LURK</div>
+        <div className="row-value">8000</div>
+        <img src="/assets/icons/painel-status/Check.png" className="status-check" />
+        
       </div>
     </div>
   );

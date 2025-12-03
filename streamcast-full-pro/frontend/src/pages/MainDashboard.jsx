@@ -7,41 +7,6 @@ export default function MainDashboard() {
     <Layout title="Dashboard Geral">
       <div className="dashboard-container">
 
-        {/* ===================== SUPERIOR ===================== */}
-        <div className="top-status-row">
-          
-          <div className="status-left">
-            <h2 className="username">RoninGamingBR</h2>
-
-            <div className="status-box">
-              <span className="label">PONTOS DE LURK</span>
-              <span className="value">8000</span>
-            </div>
-
-            <div className="status-box">
-              <span className="label">PASSE VIP</span>
-              <span className="value green">20 ✔</span>
-            </div>
-
-            <div className="status-box">
-              <span className="label">TICKETS/FOLLOWS</span>
-              <span className="value green">10 ✔</span>
-            </div>
-
-            <div className="status-box">
-              <span className="label">RANKING</span>
-              <span className="value gold">OURO 🥇</span>
-            </div>
-
-            <div className="status-box">
-              <span className="label">META DE LURK</span>
-              <span className="value">8000</span>
-            </div>
-          </div>
-
-          {/* Botões do topo */}
-        </div>
-
         {/* ===================== DESTAQUES ===================== */}
         <div className="top-row">
 
@@ -117,9 +82,7 @@ export default function MainDashboard() {
         {/* ===================== NOTIFICAÇÕES ===================== */}
         <div className="notifications-container">
           <h3>NOTIFICAÇÕES</h3>
-          <p>
-            Todas as notificações, atualizações e detalhes estarão no Discord.
-          </p>
+          <p>Todas as notificações, atualizações e detalhes estarão no Discord.</p>
           <button className="discord-btn">ABRIR</button>
         </div>
 
@@ -132,7 +95,7 @@ export default function MainDashboard() {
 
         {/* ===================== CONFIGURAÇÕES ===================== */}
         <div className="system-config">
-          <h3>CONFIGS DO SISTEMA</h3>
+          <h3>CONFIGURAÇÕES DO SISTEMA</h3>
           <ul>
             <li>Passe VIP: limite diário 20</li>
             <li>Uso de pontos por live: 10</li>

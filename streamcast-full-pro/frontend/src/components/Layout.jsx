@@ -1,28 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "./Sidebar";
-import Header from "./Header";
+import LoginModal from "./LoginModal";
 import TopBar from "./TopBar";
 import "./Layout.css";
 
 export default function Layout({ title, children }) {
+  const [openLogin, setOpenLogin] = useState(false);
+
   return (
     <div className="layout-wrapper">
-      
+      {/* SIDEBAR à esquerda */}
       <Sidebar />
 
+      {/* CONTEÚDO PRINCIPAL */}
       <div className="layout-main">
 
-        {/* Header azul */}
-        <div className="header-wrapper">
-          <Header title={title} />
-        </div>
+        {/* TOPBAR profissional */}
+        <TopBar onLoginClick={() => setOpenLogin(true)} />
 
-        {/* TopBar com botões */}
-        <div className="topbar-wrapper">
-          <TopBar />
-        </div>
+        {/* MODAL DE LOGIN */}
+        {openLogin && <LoginModal onClose={() => setOpenLogin(false)} />}
 
-        {/* Conteúdo do dashboard */}
+        {/* CONTEÚDO DAS PÁGINAS */}
         <div className="layout-content">
           {children}
         </div>

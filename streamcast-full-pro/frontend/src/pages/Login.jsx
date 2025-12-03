@@ -1,39 +1,48 @@
-import React from "react";
-import "./Login.css";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
+import "./Login.css";
 
 export default function Login() {
-  const navigate = useNavigate();
   const { login } = useAuth();
 
-  function handleSubmit(e) {
+  const [user, setUser] = useState("");
+  const [pass, setPass] = useState("");
+  const [error, setError] = useState("");
+
+  const handleLogin = (e) => {
     e.preventDefault();
 
-    // Aqui futuramente vamos chamar o backend.
-    // Por enquanto, simulação:
+    // LOGIN DE TESTE
+    if (user === "admin" && pass === "1234") {
+      login({ name: "Administrador" });
+      return;
+    }
 
-    const fakeUser = {
-      name: "Luiz",
-      email: "admin@streamcast.com",
-      role: "admin", // ou "user"
-      token: "123456789",
-    };
-
-    login(fakeUser);
-
-    if (fakeUser.role === "admin") navigate("/dashboard");
-    else navigate("/streams");
-  }
+    setError("Usuário ou senha incorretos.");
+  };
 
   return (
     <div className="login-container">
-      <h1>StreamCast Login</h1>
+      <form className="login-box" onSubmit={handleLogin}>
+        <h2>Entrar</h2>
 
-      <form className="login-box" onSubmit={handleSubmit}>
-        <input type="text" placeholder="E-mail" />
-        <input type="password" placeholder="Senha" />
-        <button type="submit">Entrar</button>
+        {error && <p className="error">{error}</p>}
+
+        <input
+          type="text"
+          placeholder="Usuário"
+          value={user}
+          onChange={(e) => setUser(e.target.value)}
+        />
+
+        <input
+          type="password"
+          placeholder="Senha"
+          value={pass}
+          onChange={(e) => setPass(e.target.value)}
+        />
+
+        <button type="submit">Acessar</button>
       </form>
     </div>
   );

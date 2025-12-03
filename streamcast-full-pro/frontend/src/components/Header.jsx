@@ -1,11 +1,12 @@
-import React from "react";
-import "./Header.css";
+import Topbar from "./TopBar";
 
-export default function Header({ title }) {
+export default function Layout({ children }) {
   return (
-    <header className="header">
-      <h1 className="header-title">{title}</h1>
-      <div className="header-user">Usuário</div>
-    </header>
+    <div className="layout-wrapper">
+      <Topbar />
+      <div className="layout-main">
+        {children}
+      </div>
+    </div>
   );
 }

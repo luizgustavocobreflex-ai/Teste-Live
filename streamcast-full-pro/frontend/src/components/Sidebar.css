@@ -1,114 +1,139 @@
+/* Sidebar container */
 .sidebar {
-  width: 310px;
-  background: #0d0d0d;
-  padding: 20px;
-  border-right: 3px solid #3c3c3c;
+  width: 300px;
+  background: #101010;
   color: white;
-  font-family: "Montserrat", sans-serif;
-  overflow-y: auto;
   height: 100vh;
+  padding: 15px 20px;
+  border-right: 3px solid #2d2d2d;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* LOGO */
-.sidebar-logo {
-  text-align: center;
+/* LIVE STATUS - layout do print */
+.status-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
   margin-bottom: 25px;
 }
 
-.sidebar-logo img {
-  width: 65px;
-  margin-bottom: 10px;
+/* Ícone grande Live Status */
+.status-icon-big {
+  width: 80px;   /* tamanho ideal */
+  height: auto;
+  margin-bottom: 6px;
 }
 
-.sidebar-logo h2 {
-  font-size: 20px;
-  line-height: 1.1;
-  letter-spacing: 1px;
-  font-weight: 600;
+/* Botão ON */
+.status-toggle {
+  width: 70px;
+  margin-bottom: 8px;
 }
 
-/* SECTIONS */
-.sidebar-section {
-  margin-bottom: 25px;
-}
-
-.sidebar-section h3 {
-  font-size: 15px;
-  margin-bottom: 10px;
+/* Nome do streamer */
+.status-user {
+  font-size: 16px;
   font-weight: 700;
-  color: #d6d6d6;
+  color: #8ecaff;
+  text-shadow: 0px 0px 4px #000;
 }
 
-/* LIVE STATUS */
-.live h3 {
-  color: #ff4b4b;
-}
 
-.live-indicator {
+/* ROWS */
+.status-row {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+
   display: flex;
   align-items: center;
-  font-size: 14px;
-  margin-bottom: 5px;
+  gap: 8px;
 }
 
-.live-indicator .dot {
-  width: 10px;
-  height: 10px;
-  background: #31ff31;
-  border-radius: 50%;
-  margin-right: 8px;
+.status-ico {
+  width: 22px;
+  opacity: 0.85;
 }
 
-.username {
-  font-size: 14px;
-  margin-top: 3px;
-  margin-bottom: 15px;
+.vip-icon {
+  width: 28px;
 }
 
-/* INFO BLOCKS */
-.info-block {
-  background: #181818;
-  border: 1px solid #443;
-  padding: 10px;
-  border-radius: 6px;
-  margin-bottom: 12px;
-  display: flex;
-  justify-content: space-between;
+.row-title {
+  flex: 1;
+  font-size: 12px;
+  opacity: 0.85;
 }
 
-.info-block .label {
-  opacity: 0.8;
-  font-size: 13px;
-}
-
-.info-block .value {
+.row-value {
   font-size: 14px;
   font-weight: bold;
 }
 
-.value.green {
-  color: #31ff50;
+.row-value.gold {
+  color: #ffde73;
 }
 
-.value.gold {
-  color: #ffd86b;
+.status-check {
+  width: 23px;
+  margin-left: auto;
 }
 
-/* TOP 7 */
-.lurkers-list {
-  padding-left: 20px;
-  font-size: 13px;
-  line-height: 1.5;
+.rank-badge {
+  width: 35px;
+  margin-left: auto;
 }
 
-/* ACTIVE LURKERS */
-.active-list {
-  padding-left: 15px;
-  max-height: 220px;
-  overflow-y: auto;
+/* LOGO DO SISTEMA */
+.sidebar-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+  padding-top: 10px;
 }
 
-.active-list li {
-  font-size: 13px;
-  line-height: 1.4;
+.logo-img {
+  width: 240px;      /* TAMANHO PERFEITO DO PRINT */
+  height: auto;
+  opacity: 0.95;
+}
+
+/* Container geral */
+.status-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Linha LIVE STATUS + ON */
+.live-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* espaçamento entre LIVE STATUS e ON */
+  margin-bottom: 8px;
+}
+
+/* Ícone LIVE STATUS */
+.status-icon-text {
+  width: 80px;     /* seu tamanho definido */
+  height: auto;
+}
+
+/* Botão ON/OFF */
+.status-toggle {
+  width: 65px;     /* proporcional ao original */
+  height: auto;
+}
+
+/* Nome do usuário */
+.status-user {
+  font-size: 17px;
+  font-weight: 700;
+  color: #87c3ff;
+  text-shadow: 0px 0px 4px #000;
 }
